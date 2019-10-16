@@ -1,7 +1,7 @@
 var varSize=3
 const balloonDiv=document.getElementById('balloonDiv')
 const ballonPara=document.getElementById('balloonPara')
-const balloonSize=ballonPara.style.fontSize
+var balloonSize=ballonPara.style.fontSize
 
 /*function balloonChange(event) {
     while (varSize>0 && varSize<6) {
