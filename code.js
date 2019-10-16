@@ -11,7 +11,7 @@ function balloonChange(event) {
             let fontSizeStr = window.getComputedStyle(balloonPara).getPropertyValue('font-size');
             let numberStr = fontSizeStr.substr(0, fontSizeStr.length - 2);
             let size = parseInt(numberStr, 10);
-            let newFontSize = (size + 10) - 'px';
+            let newFontSize = (size - 10) + 'px';
             balloonPara.style.fontSize= newFontSize;
             varSize-=1;
             console.log(varSize)
