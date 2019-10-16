@@ -18,7 +18,7 @@ function balloonChange(event) {
         }
     } else if (event.code=='KeyI') {
         if (varSize<6) {
-            balloonSize=(balloonSize.substring(0,2)+10)+'px';
+            balloonSize=(toString(parseInt(balloonSize.substring(0,2)))+10)+'px';
             varSize+=1;
             console.log(varSize)
         } else {
