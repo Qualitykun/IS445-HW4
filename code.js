@@ -8,9 +8,11 @@ function balloonChange(event) {
         if (event.code=='KeyD') {
             balloonSize=(balloonSize-10)+'px';
             varSize-=1;
+            console.log(varSize)
         } else if (event.code=='KeyI') {
             balloonSize=(balloonSize+10)+'px';
             varSize+=1;
+            console.log(varSize)
         }
     }
     if (varSize==0) {
@@ -26,5 +28,6 @@ function balloonChange(event) {
 balloonDiv.addEventListener('keyup', balloonChange)
 
 balloonDiv.addEventListener('click', test => {
-    console.log('hi')    
+    console.log('hi');
+    console.log(varSize);
 })
