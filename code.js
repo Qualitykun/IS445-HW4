@@ -1,26 +1,32 @@
 var varSize=3
 const balloonDiv=document.getElementById('balloonDiv')
 const ballonPara=document.getElementById('balloonPara')
-var balloonSize=ballonPara.style.fontSize
+/*var balloonSize=ballonPara.style.fontSize*/
 
 document.addEventListener('keyup', balloonChange)
 
 function balloonChange(event) {
     if (event.code=='KeyD') {
         if (varSize>0) {
-            let balloonInt = parseInt(balloonSize.substr(0,2));
-            balloonPara.style.fontSize=(balloonInt-10)+'px';
+            let fontSizeStr = window.getComputedStyle(para).getPropertyValue('font-size');
+            let numberStr = fontSizeStr.substr(0, fontSizeStr.length - 2);
+            let size = parseInt(numberStr, 10);
+            let newFontSize = (size + 10) + 'px';
+            balloonPara.style.fontSize= newFontSize;
             varSize-=1;
             console.log(varSize)
         } else {
-            balloonSize = "10pt";
+            balloonPara.style.fontSize = "10pt";
             balloonPara.innerHTML = "Done";
             document.removeEventListener('keyup', balloonChange);
         }
     } else if (event.code=='KeyI') {
         if (varSize<6) {
-            let balloonInt = parseInt(balloonSize.substr(0,2));
-            ballonPara.style.fontSize=(balloonInt+10)+'px';
+            let fontSizeStr = window.getComputedStyle(para).getPropertyValue('font-size');
+            let numberStr = fontSizeStr.substr(0, fontSizeStr.length - 2);
+            let size = parseInt(numberStr, 10);
+            let newFontSize = (size - 10) + 'px';
+            balloonPara.style.fontSize= newFontSize;
             varSize+=1;
             console.log(varSize)
         } else {
