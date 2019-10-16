@@ -7,7 +7,7 @@ document.addEventListener('keyup', balloonChange)
 
 function balloonChange(event) {
     if (event.code=='KeyD') {
-        if (varSize>0) {
+        if (varSize>1) {
             let fontSizeStr = window.getComputedStyle(balloonPara).getPropertyValue('font-size');
             let numberStr = fontSizeStr.substr(0, fontSizeStr.length - 2);
             let size = parseInt(numberStr, 10);
