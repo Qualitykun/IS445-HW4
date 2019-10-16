@@ -11,17 +11,14 @@ function balloonChange(event) {
     }  
 }
 
-function balloonEvent() {
-    balloonDiv.addEventListener('keyup', balloonChange)
-    if (varSize==0) {
-        balloonDiv.style.fontSize = "16pt";
-        balloonDiv.innerHTML = "Done";
-        balloonDiv.removeEventListener('keyup', balloonChange);
-    } else if (varSize==6) {
-        balloonDiv.innerHTML = "💥";
-        balloonDiv.removeEventListener('keyup', balloonChange);
-    }
-    
-}
 
-balloonEvent();
+balloonDiv.addEventListener('keyup', balloonChange)
+if (varSize==0) {
+    balloonDiv.style.fontSize = "16pt";
+    balloonDiv.innerHTML = "Done";
+    balloonDiv.removeEventListener('keyup', balloonChange);
+} else if (varSize==6) {
+    balloonDiv.innerHTML = "💥";
+    balloonDiv.removeEventListener('keyup', balloonChange);
+}
+    
