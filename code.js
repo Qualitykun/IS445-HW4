@@ -2,10 +2,10 @@ var varSize=[3]
 const balloonDiv=document.getElementById('balloon')
 
 function balloonChange(event) {
-    if (event.key=='KeyD') {
+    if (event.code=='KeyD') {
         balloonDiv.style.fontSize=(balloonDiv.style.fontSize-10)+'px';
         varSize-=1;
-    } else if (event.key=='KeyI') {
+    } else if (event.code=='KeyI') {
         balloonDiv.style.fontSize=(balloonDiv.style.fontSize+10)+'px';
         varSize+=1;
     }  
