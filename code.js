@@ -34,7 +34,7 @@ document.addEventListener('keyup', balloonChange => {
         } else {
             balloonSize = "10pt";
             balloonPara.innerHTML = "Done";
-            balloonDiv.removeEventListener('keyup', balloonChange);
+            document.removeEventListener('keyup', balloonChange);
         }
     } else if (event.code=='KeyI') {
         if (varSize<6) {
@@ -43,7 +43,7 @@ document.addEventListener('keyup', balloonChange => {
             console.log(varSize)
         } else {
             balloonPara.innerHTML = "💥";
-            balloonDiv.removeEventListener('keyup', balloonChange);
+            document.removeEventListener('keyup', balloonChange);
         }
     }
 })
