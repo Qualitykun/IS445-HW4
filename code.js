@@ -1,5 +1,5 @@
 var varSize=[3]
-const balloonDiv = document.getElementById('balloon')
+const balloonDiv=document.getElementById("balloon")
 function balloonInf(event) {
     if (event.key=='KeyI') {
         balloonDiv.style.fontSize=(balloonDiv.style.fontSize+10)+'px';
