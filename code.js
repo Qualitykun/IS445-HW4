@@ -1,5 +1,5 @@
 var varSize=[3]
-const balloonDiv=document.getElementById("balloon")
+const balloonDiv=document.getElementById('balloon')
 
 function balloonChange(event) {
     if (event.key=='KeyD') {
@@ -12,7 +12,7 @@ function balloonChange(event) {
 }
 
 function balloonEvent() {
-    balloonDiv.addEventListener('keyup', balloonChange);
+    balloonDiv.addEventListener('keyup', balloonChange)
     if (varSize==0) {
         balloonDiv.style.fontSize = "16pt";
         balloonDiv.innerHTML = "Done";
