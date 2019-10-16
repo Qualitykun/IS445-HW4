@@ -8,7 +8,7 @@ balloonDiv.addEventListener('click', test => {
     console.log(varSize);
 })
 
-function ballonhandler(event) {
+function balloonhandler(event) {
     if (event.code=='KeyI') {
         inflate()
     }
@@ -17,7 +17,7 @@ function ballonhandler(event) {
     }
 }
 
-balloonDiv.addEventListener('keyup', ballonhandler)
+document.addEventListener('keyup', balloonhandler)
 
 function inflate() {
     let fontSizeStr = window.getComputedStyle(ballonPara).getPropertyValue('font-size')
