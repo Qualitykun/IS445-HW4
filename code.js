@@ -25,7 +25,7 @@ const balloonSize=ballonPara.style.fontSize
     }   
 }*/
 
-balloonDiv.addEventListener('keyup', balloonChange => {
+document.addEventListener('keyup', balloonChange => {
     while (varSize>0 && varSize<6) {
         if (event.code=='KeyD') {
             balloonSize=(balloonSize-10)+'px';
