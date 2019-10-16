@@ -33,5 +33,5 @@ function balloonChange(event) {
 balloonDiv.addEventListener('click', test => {
     console.log('hi');
     console.log(varSize);
-    console.log(balloonSize)
+    console.log(document.getElementById('balloonPara').style.fontSize)
 })
