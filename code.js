@@ -8,6 +8,7 @@ function balloonChange(event) {
     } else if (event.code=='KeyI') {
         balloonDiv.style.fontSize=(balloonDiv.style.fontSize+10)+'px';
         varSize+=1;
+        console.log(varSize)
     }  
 }
 
