@@ -21,12 +21,10 @@ function balloonChange(event) {
         balloonPara.innerHTML = "💥";
         balloonDiv.removeEventListener('keyup', balloonChange);
     }   
-    
 }
 
-document.getElementById('balloonDiv').addEventListener('keyup', balloonChange)
+balloonDiv.addEventListener('keyup', balloonChange)
 
-
-document.getElementById('balloonDiv').addEventListener('click', test => {
+balloonDiv.addEventListener('click', test => {
     console.log('hi')    
 })
