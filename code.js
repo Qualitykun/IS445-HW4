@@ -9,7 +9,7 @@ function balloonChange(event) {
     if (event.code=='KeyD') {
         if (varSize>0) {
             let balloonInt = parseInt(balloonSize.substr(0,2));
-            balloonSize=(balloonInt-10)+'px';
+            balloonPara.style.fontSize=(balloonInt-10)+'px';
             varSize-=1;
             console.log(varSize)
         } else {
@@ -20,7 +20,7 @@ function balloonChange(event) {
     } else if (event.code=='KeyI') {
         if (varSize<6) {
             let balloonInt = parseInt(balloonSize.substr(0,2));
-            balloonSize=(balloonInt+10)+'px';
+            ballonPara.style.fontSize=(balloonInt+10)+'px';
             varSize+=1;
             console.log(varSize)
         } else {
