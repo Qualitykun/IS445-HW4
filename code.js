@@ -8,7 +8,8 @@ document.addEventListener('keyup', balloonChange)
 function balloonChange(event) {
     if (event.code=='KeyD') {
         if (varSize>0) {
-            balloonSize=(balloonSize.substring(0,2)-10)+'px';
+            let balloonInt = parseInt(balloonSize.substr(0,2));
+            balloonSize=(balloonInt-10)+'px';
             varSize-=1;
             console.log(varSize)
         } else {
@@ -18,7 +19,8 @@ function balloonChange(event) {
         }
     } else if (event.code=='KeyI') {
         if (varSize<6) {
-            balloonSize=(toString(parseInt(balloonSize.substring(0,2)))+10)+'px';
+            let balloonInt = parseInt(balloonSize.substr(0,2));
+            balloonSize=(balloonInt+10)+'px';
             varSize+=1;
             console.log(varSize)
         } else {
