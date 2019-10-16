@@ -1,30 +1,25 @@
 var varSize=[3]
 const balloonDiv=document.getElementById("balloon")
-function balloonInf(event) {
-    if (event.key=='KeyI') {
-        balloonDiv.style.fontSize=(balloonDiv.style.fontSize+10)+'px';
-        varSize+=1;
-    } 
-}
 
-function balloonDef(event) {
+function balloonChange(event) {
     if (event.key=='KeyD') {
         balloonDiv.style.fontSize=(balloonDiv.style.fontSize-10)+'px';
         varSize-=1;
-    }
-    
+    } else if (event.key=='KeyI') {
+        balloonDiv.style.fontSize=(balloonDiv.style.fontSize+10)+'px';
+        varSize+=1;
+    }  
 }
 
 function balloonEvent() {
-    while (varSize>0 && varSize<6) {
-        balloonDiv.addEventListener('keyup', balloonDef);
-        balloonDiv.addEventListener('keyup', balloonInf);
-    } 
+    balloonDiv.addEventListener('keyup', balloonChange);
     if (varSize==0) {
         balloonDiv.style.fontSize = "16pt";
         balloonDiv.innerHTML = "Done";
+        balloonDiv.removeEventListener('keyup', balloonChange);
     } else if (varSize==6) {
-        balloonDiv.innerHTML = "💥"
+        balloonDiv.innerHTML = "💥";
+        balloonDiv.removeEventListener('keyup', balloonChange);
     }
     
 }
