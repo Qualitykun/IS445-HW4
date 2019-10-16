@@ -14,7 +14,7 @@ function balloonChange(event) {
 }
 
 function balloonEvent() {
-    balloonDiv.addEventListener('keyup', balloonChange);
+    document.getElementById('balloonDiv').addEventListener('keyup', balloonChange);
     if (varSize==0) {
         balloonDiv.style.fontSize = "16pt";
         balloonDiv.innerHTML = "Done";
