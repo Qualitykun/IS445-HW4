@@ -25,7 +25,9 @@ var balloonSize=ballonPara.style.fontSize
     }   
 }*/
 
-document.addEventListener('keyup', balloonChange => {
+document.addEventListener('keyup', balloonChange)
+
+function balloonChange(event) {
     if (event.code=='KeyD') {
         if (varSize>0) {
             balloonSize=(balloonSize-10)+'px';
@@ -46,7 +48,7 @@ document.addEventListener('keyup', balloonChange => {
             document.removeEventListener('keyup', balloonChange);
         }
     }
-})
+}
 
 balloonDiv.addEventListener('click', test => {
     console.log('hi');
