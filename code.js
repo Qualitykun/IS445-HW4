@@ -1,4 +1,4 @@
-var varSize=[3]
+var varSize=3
 const balloonDiv=document.getElementById('balloonDiv')
 const ballonPara=document.getElementById('balloonPara')
 const balloonSize=ballonPara.style.fontSize
