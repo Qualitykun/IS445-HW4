@@ -9,7 +9,6 @@ function balloonChange(event) {
     } else if (event.code=='KeyI') {
         balloonPara.style.fontSize=(balloonPara.style.fontSize+10)+'px';
         varSize+=1;
-        console.log(varSize)
     }  
 }
 
@@ -26,3 +25,7 @@ function balloonEvent() {
 }
 
 balloonEvent();
+
+document.getElementById('balloonDiv').addEventListener('click', test => {
+    console.log('hi')    
+})
